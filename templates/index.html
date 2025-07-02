@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Golf Talent Magnet Score</title>
+  </head>
+  <body>
+    <h1>Golf Talent Magnet Assessment</h1>
+    <form method="post">
+      <h2>Golf Attraction Score Fragen</h2>
+      {% for i in range(1, 6) %}
+        <label>Frage GA{{ i }}: <input type="number" name="ga_{{ i }}" min="0" max="10" required></label><br>
+      {% endfor %}
+      <h2>Recruiting Score Fragen</h2>
+      {% for i in range(1, 6) %}
+        <label>Frage RS{{ i }}: <input type="number" name="rs_{{ i }}" min="0" max="10" required></label><br>
+      {% endfor %}
+      <button type="submit">Ergebnisse anzeigen</button>
+    </form>
+  </body>
+</html>
